@@ -1,0 +1,6 @@
+@Cidade_Inteligente_HostAddress = http://localhost:5171
+
+GET {{Cidade_Inteligente_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
