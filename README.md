@@ -1,8 +1,4 @@
-# ColetaAPI - Deploy Automatizado com GitHub Actions + Azure
-
-Este projeto utiliza integração contínua (CI) e entrega contínua (CD) usando **GitHub Actions** e **Azure Web App** com **OpenID Connect** (OIDC), sem precisar de perfil de publicação ou FTP.
-
----
+# ColetaAPI
 
 ## ✅ Tecnologias usadas
 
