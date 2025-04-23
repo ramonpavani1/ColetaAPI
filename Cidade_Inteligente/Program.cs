@@ -77,8 +77,8 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Habilitar a captura de erros na produção
-if (app.Environment.IsDevelopment())
+// Habilitar a captura de erros na produção e Swagger
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
