@@ -58,6 +58,11 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_BE8C2B33ACE740B387E082981E525370 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5EA00D05DDCB4918989861943F92C49F }}
 
+      - name: Set environment variables for app
+        run: |
+          echo "JWT__SecretKey=${{ secrets.JWT_SECRET_KEY }}" >> $env:GITHUB_ENV
+          echo "ConnectionStrings__DefaultConnection=${{ secrets.DEFAULT_CONNECTION }}" >> $env:GITHUB_ENV
+
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
